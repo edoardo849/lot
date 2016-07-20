@@ -6,6 +6,8 @@
 *.a
 *.so
 
+functions/*
+
 # Folders
 _obj
 _test
