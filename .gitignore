@@ -6,7 +6,7 @@
 *.a
 *.so
 
-functions/*
+functions/*/*.go
 
 # Folders
 _obj
