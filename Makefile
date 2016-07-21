@@ -24,4 +24,11 @@ deploy: deps clean duplicate
 art:
 	@cat $(FILE)
 plot: art
-	@echo '{ "value": "What if" }' | apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why | json value
+	@echo '{ "value": "What if" }' | \
+	apex invoke who | \
+	apex invoke what | \
+	apex invoke who | \
+	apex invoke when | \
+	apex invoke where | \
+	apex invoke why | \
+	json value && echo "\n"

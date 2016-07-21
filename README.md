@@ -84,5 +84,19 @@ make deploy
 make plot
 ```
 
+Something like this should come out: hopefully it will make great sense... but most of the time is just silly.
+
+```txt
+_                    _         _                __   _   _
+| |    __ _ _ __ ___ | |__   __| | __ _    ___  / _| | |_| |__  _ __ ___  _ __   ___  ___
+| |   / _` | '_ ` _ \| '_ \ / _` |/ _` |  / _ \| |_  | __| '_ \| '__/ _ \| '_ \ / _ \/ __|
+| |__| (_| | | | | | | |_) | (_| | (_| | | (_) |  _| | |_| | | | | | (_) | | | |  __/\__ \
+|_____\__,_|_| |_| |_|_.__/ \__,_|\__,_|  \___/|_|    \__|_| |_|_|  \___/|_| |_|\___||___/
+
+
+What if Jon Snow drank all the wine of Tywin Lannister after winter came in the Eyre because when dead men come hunting... you think it matters who sits on the iron throne?
+
+```
+
 ## Under the hood
 TODO
