@@ -129,7 +129,8 @@ echo '{ "value": "What if" }' | apex invoke who
 
 or be more creative and:
 ```bash
-echo '{ "value": "The best character is" }' | apex invoke who
+echo '{ "value": "The best character is" }' | apex invoke who | apex invoke why
+
 ```
 
 The complete code from the Makefile is:
