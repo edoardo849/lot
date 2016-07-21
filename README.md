@@ -86,6 +86,11 @@ make plot
 
 Something like this should come out: hopefully it will make great sense... but most of the time is just silly.
 
+In order to check out the lambda functions that were created, run:
+```bash
+aws lambda list-functions --profile=YOUR-PROFILE --region=YOUR-REGION
+```
+
 ```txt
 _                    _         _                __   _   _
 | |    __ _ _ __ ___ | |__   __| | __ _    ___  / _| | |_| |__  _ __ ___  _ __   ___  ___
