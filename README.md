@@ -136,7 +136,12 @@ echo '{ "value": "The best character is" }' | apex invoke who | apex invoke why
 The complete code from the Makefile is:
 ```bash
 echo '{ "value": "What if" }' | \
-apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why
+apex invoke who | \
+apex invoke what | \
+apex invoke who | \
+apex invoke when | \
+apex invoke where | \
+apex invoke why
 ```
 
 You can of course play around and replace the seed data from the `./data` folder into whatever you like to produce a valid random phrase generator.
