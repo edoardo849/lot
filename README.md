@@ -99,4 +99,37 @@ What if Jon Snow drank all the wine of Tywin Lannister after winter came in the 
 ```
 
 ## Under the hood
-TODO
+So apart from the obvious value of having a random plot generator... this project demonstrate that it's possible to chain lambda functions together in the Terminal to achieve a UNIX-like piping of outputs.
+
+### Project structure
+All the code is actually in the `./src` folder. The Makefile is just replicating the code inside the `./functions` folder and replacing a variable to correctly name each function. Each function is called after one of the [Five Ws](https://en.wikipedia.org/wiki/Five_Ws):
+- who  
+- what
+- when
+- where
+- why
+
+Now this is of course not optimal... but remember that we just want to chain lambda functions together and to obtain their different logs.
+
+When `make plot` is called we are actually invoking each lambda function individually passing around the resulting `json`. The first seed is:
+```json
+{ "value": "What if" }
+```
+
+In order to try it out, you can copy-paste in the Terminal:
+```bash
+echo '{ "value": "What if" }' | apex invoke who
+```
+
+or be more creative and:
+```bash
+echo '{ "value": "The best character is" }' | apex invoke who
+```
+
+The complete code from the Makefile is:
+```bash
+echo '{ "value": "What if" }' | \
+apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why
+```
+
+You can of course play around and replace the seed data from the `./data` folder into whatever you like to produce a valid random phrase generator.
