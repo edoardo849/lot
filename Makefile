@@ -1,5 +1,9 @@
 ROOT=functions
 5W=what who when where why
+deps:
+	@go get ./src/...
+test: deps
+	@go test ./src/...
 clean:
 	@for folder in $(5W) ; do \
     rm -rf ./$(ROOT)/$$folder ; \
@@ -7,11 +11,12 @@ clean:
 duplicate:
 	@for folder in $(5W) ; do \
 		mkdir ./$(ROOT)/$$folder && \
-		find ./src -name '*.go' -exec cp -prv '{}' "./$(ROOT)/$$folder/main.go" ';' && \
+		find ./src -name '*.go' -exec cp -prv '{}' "./$(ROOT)/$$folder/" ';' && \
 		cp ./data/$$folder.json ./$(ROOT)/$$folder/$$folder.json && \
+		echo "*.go" > ./$(ROOT)/$$folder/.apexignore && \
 		sed -i '' "s/masterfunc/$$folder/g" ./$(ROOT)/$$folder/main.go ; \
 	done
-deploy: clean duplicate
-	apex deploy
+deploy: deps clean duplicate
+	@apex deploy
 plot:
 	@echo '{ "value": "What if" }' | apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why
