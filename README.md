@@ -24,6 +24,7 @@ For this project to work you'll need to:
 
 ## Recommended modules
 Optionally, if you want to see your logs in [ELK](https://www.elastic.co/products) :
+
 1. have an AWS account with further full access to:
   - AWS ElasticSearch
 1. have [Sense Chrome extension](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=en) installed
