@@ -1,0 +1,3 @@
+#!/bin/sh
+export AWS_PROFILE=default
+export AWS_REGION=eu-west-1

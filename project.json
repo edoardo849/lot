@@ -2,9 +2,9 @@
 {
   "name": "lot",
   "description": "Logging of Thrones",
-  "profile": "edoardo849",
   "memory": 128,
   "timeout": 5,
+  "profile":"edoardo849",
   "role": "arn:aws:iam::060063977388:role/lot_lambda_function",
   "runtime":"golang",
   "environment": {}
