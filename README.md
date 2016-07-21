@@ -47,13 +47,14 @@ Initialise Apex
 # set your default profile for AWS and AWS region
 source ./config
 
-apex init
+# run the setup
+make setup
 
 # Project name
 Project name: lot
 
 # Project description
-Project description: Logging of Thrones
+Project description: Lambda of Thrones
 ```
 
 I always find useful to setup the aws profile in the project.json file that apex will generate:

@@ -1,5 +1,7 @@
 ROOT=functions
 5W=what who when where why
+setup:
+	@apex init
 deps:
 	@go get ./src/...
 test: deps
