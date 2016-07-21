@@ -1,5 +1,6 @@
 ROOT=functions
 5W=what who when where why
+FILE=ascii
 setup:
 	@apex init
 deps:
@@ -20,5 +21,7 @@ duplicate:
 	done
 deploy: deps clean duplicate
 	@apex deploy
-plot:
-	@echo '{ "value": "What if" }' | apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why
+art:
+	@cat $(FILE)
+plot: art
+	@echo '{ "value": "What if" }' | apex invoke who | apex invoke what | apex invoke who | apex invoke when | apex invoke where | apex invoke why | json value

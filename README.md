@@ -20,6 +20,7 @@ For this project to work you'll need to:
   - CloudWatch
 1. have [GoLang](https://golang.org/doc/install) installed on your local machine
 1. have [AWS CLI](https://aws.amazon.com/cli/) tools installed on your local machine with valid `~/.aws/config` and `~/.aws/credentials` files
+1. have [json - JSON love for your command line](http://trentm.com/json/#INSTALL-PROJECT-BUGS) installed
 
 ## Recommended modules
 Optionally, if you want to see your logs in [ELK](https://www.elastic.co/products) :
