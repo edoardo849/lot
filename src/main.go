@@ -7,21 +7,19 @@ import (
 
 	"github.com/apex/go-apex"
 	"github.com/apex/log"
-	"github.com/apex/log/handlers/text"
+	jsonLog "github.com/apex/log/handlers/json"
 )
 
-const funcName = "masterfunc"
-
 func init() {
-	log.SetHandler(text.New(os.Stderr))
+	log.SetHandler(jsonLog.New(os.Stderr))
 	rand.Seed(time.Now().UTC().UnixNano())
 }
 
 func main() {
 
-	logger := log.WithFields(log.Fields{
-		"function": funcName,
-	})
-
-	apex.HandleFunc(HandleEvent(logger, funcName))
+	apex.HandleFunc(
+		WithVars(
+			WithLogger(HandleEvent),
+		),
+	)
 }

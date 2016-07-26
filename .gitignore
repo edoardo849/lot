@@ -2,7 +2,7 @@
 # APEX
 # ====
 project.json
-
+.DS_Store
 # ===================
 # GoLang stuff
 # ===================

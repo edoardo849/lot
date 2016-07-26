@@ -1,6 +1,8 @@
 ROOT=functions
 5W=what who when where why
 FILE=ascii
+all: deps clean duplicate
+	@apex deploy
 setup:
 	@apex init
 deps:
@@ -15,12 +17,10 @@ duplicate:
 	@for folder in $(5W) ; do \
 		mkdir ./$(ROOT)/$$folder && \
 		find ./src -name '*.go' -exec cp -prv '{}' "./$(ROOT)/$$folder/" ';' && \
-		cp ./data/$$folder.json ./$(ROOT)/$$folder/$$folder.json && \
-		echo "*.go" > ./$(ROOT)/$$folder/.apexignore && \
-		sed -i '' "s/masterfunc/$$folder/g" ./$(ROOT)/$$folder/main.go ; \
+		cp ./data/$$folder.json ./$(ROOT)/$$folder/data.json && \
+		echo "*.go" > ./$(ROOT)/$$folder/.apexignore ; \
 	done
-deploy: deps clean duplicate
-	@apex deploy
+
 art:
 	@cat $(FILE)
 plot: art

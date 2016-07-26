@@ -19,9 +19,7 @@ func init() {
 }
 
 func TestHandler(t *testing.T) {
-	name := "masterfunc"
-	logger := log.WithField("name", name)
-	handler := main.HandleEvent(logger, name)
+	handler := main.WithVars(main.WithLogger(main.HandleEvent))
 
 	msg := []byte(`{ "value": "What if" }`)
 
@@ -37,22 +35,4 @@ func TestHandler(t *testing.T) {
 	if !strings.Contains(respMsg.Value, "test") {
 		t.Error("The returned message should have appended the value of the .json file")
 	}
-
-}
-
-func TestHandlerErrorFile(t *testing.T) {
-	name := "somefile"
-	logger := log.WithField("name", name)
-	handler := main.HandleEvent(logger, name)
-
-	msg := []byte(`{ "value": "What if" }`)
-
-	ctx := apex.Context{}
-
-	_, err := handler(msg, &ctx)
-
-	if err == nil {
-		t.Error("When given an invalid file name, an error shuold be expected")
-	}
-
 }
