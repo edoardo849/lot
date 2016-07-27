@@ -9,7 +9,6 @@ import (
 
 // WithLogger is a decorator that adds log capabilities to handlers
 func WithLogger(fn apex.HandlerFunc) apex.HandlerFunc {
-
 	return func(e json.RawMessage, c *apex.Context) (interface{}, error) {
 		logger := log.WithFields(log.Fields{
 			"functionName": c.FunctionName,

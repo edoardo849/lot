@@ -137,14 +137,12 @@ function extractLambda(message) {
   var startEndParts, reportParts;
 
   startEndParts = message.match(/(START|END) RequestId: (.*)/);
-
   if (startEndParts !== null && startEndParts.length > 0){
     return {
       "fields":{
         "execution":startEndParts[1],
         "requestID":startEndParts[2]
       }
-
     }
   }
 
@@ -159,7 +157,6 @@ function extractLambda(message) {
         "memorySize":reportParts[5] * 1,
         "maxMemoryUsed":reportParts[6] * 1,
       }
-
     }
   }
 
