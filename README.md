@@ -145,3 +145,6 @@ apex invoke why
 ```
 
 You can of course play around and replace the seed data from the `./data` folder into whatever you like to produce a valid random phrase generator.
+
+## Slides
+You can [download the slides](https://docs.google.com/presentation/d/1LH_ov8Jy0hyeudvKbeqUJj8kxN6YH_7ya3uEQOvMesY/edit?usp=sharing) from Google Slides.
