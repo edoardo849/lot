@@ -81,7 +81,7 @@ function transform(payload) {
 
         var action = { "index": {} };
         action.index._index = indexName;
-        action.index._type = payload.logGroup; // mapping! = lot
+        action.index._type = payload.logGroup;
         action.index._id = logEvent.id;
 
         // add ttl here

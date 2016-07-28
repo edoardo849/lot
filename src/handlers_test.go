@@ -9,7 +9,7 @@ import (
 	"github.com/apex/go-apex"
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/discard"
-	"github.com/edoardo849/lot/src"
+	"github.com/edoardo849/lot/functions/who"
 )
 
 func init() {
