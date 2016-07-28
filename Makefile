@@ -20,7 +20,6 @@ duplicate:
 		cp ./data/$$folder.json ./$(ROOT)/$$folder/data.json && \
 		echo "*.go" > ./$(ROOT)/$$folder/.apexignore ; \
 	done
-
 art:
 	@cat $(FILE)
 plot: art
